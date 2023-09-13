@@ -1,12 +1,16 @@
 @forward "../vars/colors";
 @forward "../templates/layout";
+@forward "../components/display";
+@forward "../components/keyboard";
+@forward "../components/header-display";
 .content__calculator{
     background-color: rgb(12, 0, 83);
-    width: 320px;
+    width: 543px;
     // max-width: 543px; 320
     height: 700px;
     // max-height: 715px;
     
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }

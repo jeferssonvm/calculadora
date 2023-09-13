@@ -18,9 +18,62 @@
   place-content: center;
 }
 
+.content-display {
+  background-color: brown;
+  width: 100%;
+  height: 128px;
+}
+
+.keyboard__content {
+  background-color: burlywood;
+  width: 100%;
+  height: 482px;
+  padding: 31px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "seven eicht nine del" "four five six more" "one two three less" "comma cero division multiplication" "reset reset result result";
+  gap: 26px;
+}
+.keyboard__content .keyboard__buttons {
+  height: 61px;
+  width: 100px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.keyboard__content .one {
+  background-color: rebeccapurple;
+}
+
+.header {
+  background-color: chocolate;
+  width: 100%;
+  height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header .header__edit-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .edit-color__form {
+  height: 100%;
+}
+
 .content__calculator {
   background-color: rgb(12, 0, 83);
-  width: 320px;
+  width: 543px;
   height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,4 +82,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }

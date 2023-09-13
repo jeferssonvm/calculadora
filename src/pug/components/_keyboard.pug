@@ -1,7 +1,7 @@
 mixin keyboard()
     div.keyboard__content
-        button.keyboard__buttons(type="button" value="0") 0 
-        button.keyboard__buttons(type="button" value="1") 1
+        button.keyboard__buttons.cero(type="button" value="0") 0 
+        button.keyboard__buttons.one(type="button" value="1") 1
         button.keyboard__buttons(type="button" value="2") 2
         button.keyboard__buttons(type="button" value="3") 3
         button.keyboard__buttons(type="button" value="4") 4
@@ -16,5 +16,6 @@ mixin keyboard()
         button.keyboard__buttons(type="button" value="division") /
         button.keyboard__buttons(type="button" value="multiplication") *
         button.keyboard__buttons(type="button" value="reset") RESET 
-        button.keyboard__buttons(type="button" value="del") DEL 
+        button.keyboard__buttons(type="button" value="del") DEL
+        button.keyboard__buttons(type="button" value="result") = 
         
