@@ -1,0 +1,9 @@
+extend ../templates/_layout.pug
+include ../components/_display.pug
+include ../components/_header-display.pug
+include ../components/_keyboard.pug
+block main
+    div.content__calculator
+        +header-content()
+        +display()
+        +keyboard()

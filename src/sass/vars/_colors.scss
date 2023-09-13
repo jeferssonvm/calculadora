@@ -1,0 +1,37 @@
+// primeras
+
+// #3B4664 fondo
+// #181F32 pantalla 
+// #252D44 fondo botones y color botones
+// #647299 del y reset
+// #FEFFFE text
+// #EAE3DB botones
+// #D13F30 resultado
+
+// segundo 
+// #E6E6E6 fondo
+// #EEEEEE fondo pantalla 
+// #333229 text y tex botones
+// #D3CDCD fondo botoens
+// #E5E4E0 botones 
+// #388186 del y reset 
+// #C85401 resultado
+
+// tercero 
+// #17062A fondo
+// #1E0836 fondo de pantalla 
+// #1E0836 fondo botones 
+// #331B4D botones
+// #FFE538 text 
+// #FFE538 tex botones
+// #00DECF  resultado
+// #56077C del reset
+:root{
+    --color-background : #3B4664;
+    --color-background-header: #181F32;
+    --color-text: #FEFFFE;
+    --color-text-btn: #464B5C ;
+    --color-btn-reset-del: #647299;
+    --color-btn-result: #D13F30;
+    --color-btn: #EAE3DB;
+}
