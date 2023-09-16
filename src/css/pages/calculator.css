@@ -1,15 +1,22 @@
 :root {
   --color-background: #3B4664;
+  --color-background-btn:#252D44;
   --color-background-header: #181F32;
   --color-text: #FEFFFE;
   --color-text-btn: #464B5C ;
   --color-btn-reset-del: #647299;
   --color-btn-result: #D13F30;
   --color-btn: #EAE3DB;
+  --color-input-color: #D13F30;
+}
+
+html {
+  font-family: "League Spartan", sans-serif;
+  font-size: 62.5%;
 }
 
 .main {
-  background-color: rgb(174, 255, 0);
+  background-color: var(--color-background);
   color: gray;
   width: 100vw;
   height: 100vh;
@@ -19,37 +26,159 @@
 }
 
 .content-display {
-  background-color: brown;
-  width: 100%;
+  background-color: var(--color-background-header);
+  width: 322px;
   height: 128px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+.content-display .content-display__display {
+  color: var(--color-text);
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .keyboard__content {
-  background-color: burlywood;
-  width: 100%;
+  background-color: var(--color-background-btn);
+  width: 322px;
   height: 482px;
-  padding: 31px;
+  padding: 16px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "seven eicht nine del" "four five six more" "one two three less" "comma cero division multiplication" "reset reset result result";
-  gap: 26px;
+      grid-template-areas: "seven eight nine del" "four five six more" "one two three less" "comma cero division multiplication" "resets resets result result";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  border-radius: 11px;
 }
 .keyboard__content .keyboard__buttons {
   height: 61px;
-  width: 100px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  width: 58px;
+  border-radius: 11px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.keyboard__content .del, .keyboard__content .reset, .keyboard__content .more, .keyboard__content .less, .keyboard__content .multiplication, .keyboard__content .reset, .keyboard__content .comma, .keyboard__content .division {
+  font-size: 20px;
+}
+.keyboard__content .cero {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: cero;
 }
 .keyboard__content .one {
-  background-color: rebeccapurple;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+.keyboard__content .two {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+.keyboard__content .three {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+.keyboard__content .four {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+.keyboard__content .five {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+.keyboard__content .six {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+.keyboard__content .seven {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+.keyboard__content .eight {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+.keyboard__content .nine {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+.keyboard__content .comma {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: comma;
+}
+.keyboard__content .more {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: more;
+}
+.keyboard__content .less {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: less;
+}
+.keyboard__content .division {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: division;
+}
+.keyboard__content .multiplication {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: multiplication;
+}
+.keyboard__content .reset {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: resets;
+  width: 100%;
+}
+.keyboard__content .del {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: del;
+}
+.keyboard__content .result {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: result;
+  width: 100%;
 }
 
 .header {
-  background-color: chocolate;
-  width: 100%;
+  color: var(--color-text);
+  width: 322px;
   height: 68px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,19 +190,79 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: auto;
+}
+.header .header__title {
+  font-size: 3.2rem;
+  font-weight: 700;
 }
 .header .header__edit-color {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.header .header__edit-color .edit-color_subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  -webkit-margin-end: 20px;
+          margin-inline-end: 20px;
 }
 .header .edit-color__form {
-  height: 100%;
+  background-color: var(--color-background-btn);
+  height: 26px;
+  width: 71px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 20px;
+  -webkit-margin-before: 18px;
+          margin-block-start: 18px;
+}
+.header .edit-color__form .edit-color__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  width: 17px;
+  height: 17px;
+  position: relative;
+  border-radius: 50%;
+  border-color: transparent;
+}
+.header .edit-color__form .edit-color__select:focus {
+  background-color: var(--color-input-color);
+  border-color: transparent;
+}
+.header .edit-color__form .edit-color__select::before {
+  content: "";
+  color: var(--color-text);
+  position: absolute;
+  top: -25px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.header .edit-color__form .edit-color__select--first::before {
+  content: "1";
+}
+.header .edit-color__form .edit-color__select--second::before {
+  content: "2";
+}
+.header .edit-color__form .edit-color__select--third::before {
+  content: "3";
 }
 
 .content__calculator {
-  background-color: rgb(12, 0, 83);
-  width: 543px;
+  background-color: var(--color-background);
+  width: 370px;
   height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,11 +1,12 @@
-@forward "../vars/colors";
+@use "../vars/colors" as colors;
+@forward "../vars/general.scss";
 @forward "../templates/layout";
 @forward "../components/display";
 @forward "../components/keyboard";
 @forward "../components/header-display";
 .content__calculator{
-    background-color: rgb(12, 0, 83);
-    width: 543px;
+    background-color: var(--color-background);
+    width: 370px;
     // max-width: 543px; 320
     height: 700px;
     // max-height: 715px;

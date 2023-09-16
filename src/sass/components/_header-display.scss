@@ -1,17 +1,72 @@
+@use "../vars/colors" as color-var;
 .header{
-    background-color: chocolate;
-    width: 100%;
+    color: var(--color-text);
+    width: 322px;
     height: 68px;
     display: flex;
     align-items: center;
     padding-inline: 20px;
     justify-content: space-between;
+    margin: auto;
+    .header__title{
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
 
     .header__edit-color{
         display: flex;
+        align-items: center;
+        height: 100%;
+        .edit-color_subtitle{
+            font-size: 12px;
+            font-weight: 700;
+            margin-inline-end: 20px;
+        }
         
     }
     .edit-color__form{
-        height: 100%;
+        background-color: var(--color-background-btn);
+        height: 26px;
+        width: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 20px;
+        margin-block-start: 18px;
+        .edit-color__select{
+            appearance: none;
+            border: none;
+            width: 17px;
+            height: 17px;
+            position: relative;
+            border-radius: 50%;
+            border-color: transparent;
+            &:focus{
+                // background-color: var( --color-background-btn);
+                background-color: var( --color-input-color);
+                border-color: transparent;
+
+            }
+            &:not(:focus){
+            }
+            &::before{
+                content: "";
+                color: var(--color-text);
+                position: absolute;
+                top: -25px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            &--first::before{
+                content: "1";
+            }
+            &--second::before{
+                content: "2";
+            }
+            &--third::before{
+                content: "3";
+            }
+           
+        }
     }
 }

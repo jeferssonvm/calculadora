@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/pages/calculator.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/pages/calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&amp;family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
     <title>calculadora</title>
   </head>
   <body>
@@ -13,11 +16,11 @@
         <header class="header">
           <h1 class="header__title"> calc </h1>
           <div class="header__edit-color">
-            <h2 class="edit-color_subtitle">Theme</h2>
+            <h2 class="edit-color_subtitle">THEME</h2>
             <form class="edit-color__form" action="#">
-              <input class="edit-color__select" type="radio" name="select-color" value="firt-color"/>
-              <input class="edit-color__select" type="radio" name="select-color" value="second-color"/>
-              <input class="edit-color__select" type="radio" name="select-color" value="third-color"/>
+              <input class="edit-color__select edit-color__select--first " type="radio" name="select-color" value="firt-color"/>
+              <input class="edit-color__select edit-color__select--second" type="radio" name="select-color" value="second-color"/>
+              <input class="edit-color__select edit-color__select--third" type="radio" name="select-color" value="third-color"/>
             </form>
           </div>
         </header>
