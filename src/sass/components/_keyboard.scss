@@ -1,13 +1,13 @@
 .keyboard__content{
     background-color: var( --color-background-btn) ;
     width: 322px;
-    height: 482px;
+    height: 421px;
     padding: 16px;
     display: grid;
     grid-template-areas:     'seven eight nine del'    'four five six more'    'one two three less'    'comma cero division multiplication'    'resets resets result result';
     align-items: center;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 11px;
 .keyboard__buttons{
         height: 61px;
@@ -15,6 +15,7 @@
         border-radius: 11px;
         font-size: 32px;
         font-weight: 700;
+        
 }
     .del, .reset, .more, .less, .multiplication, .reset, .comma, .division{
         font-size: 20px;
@@ -67,13 +68,30 @@
     .reset{
         grid-area: resets;
         width: 100%;
+        background-color: var(--color-btn-reset-del) ;
     }
     .del{
         grid-area: del;
+        background-color: var(--color-btn-reset-del) ;
+
     }
     .result{
         grid-area: result;
         width: 100%;
+        background-color: var(--color-btn-result) ;
+        
+    }
+    .cero, .one ,.two , .three, .four, .five, .six, .seven, .eight, .nine, .more, .comma , .multiplication , .less, .division{
+        box-shadow: 0 5px var(--color-shadow1);
+        color: var(--color-text-btn);
+    }
+    .del,.reset {
+        box-shadow: 0 5px var(--color-shadow2);
+        color: var(--color-text-btn-reset-del);
+    }
+    .result{
+        box-shadow: 0 5px var(--color-shadow3);
+        color: var(--color-text-btn-result);
     }
   
 }
