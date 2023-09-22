@@ -32,8 +32,9 @@ const calculator ={
     },
     eventManager:function(date){
         if(date === "/" || date === "*" || date === "+" || date === "-"){
-            console.log("entre")
+            this.mathOperation
             this.operator = date;
+            this.dateSaved = this.dateMemory;
         }else if (date === "reset"){
             this.reset();
         }else if(date === "del"){
@@ -43,6 +44,9 @@ const calculator ={
         }else if (date ==="comma"){
             
         }else{
+            // this.operator != ""
+            // ? this.dateMemory = ""
+            // : this.dateMemory =this.dateMemory;
             this.addNumber(date)
         }
 
