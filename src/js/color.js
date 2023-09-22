@@ -65,7 +65,6 @@ if (document.querySelector('input[name = "select-color"')){
 
 function colorChange (selectColor){
     Object.keys(listColor).map(varColor => {
-        console.log(listColor[varColor].nameCss)
         rootElement.setProperty(listColor[varColor].nameCss, listColor[varColor].colors[selectColor])
     })
 }

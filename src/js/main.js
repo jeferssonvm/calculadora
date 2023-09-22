@@ -1,39 +1,59 @@
 const bottons = document.querySelectorAll(".keyboard__buttons");
 const calculator ={
-    dateSaved: "" ,
-    dateScreen:null ,
+    dateSaved: null ,
+    dateMemory:"" ,
     dateResult:null,
-    operator:null,
-    suma: function(){
-        this.dateResult = this.dateScreen + this.dateSaved;
+    operator: "",
+    mathOperation:function(){
+        console.log(this.operator   )
+        if (this.operator === "+"){
+            this.dateResult = this.dateSaved + this.dateMemory;
+        }else if (this.operator === "-"){
+            this.dateResult = this.dateSaved - this.dateMemory;
+        }else if (this.operator === "*"){
+            this.dateResult = this.dateSaved * this.dateMemory;
+        }else if (this.operator === "/"){
+            this.dateResult = this.dateSaved / this.dateMemory;
+        }
     },
-    resta: function(){
-        this.dateResult = this.dateScreen - this.dateSaved;
+    reset:function(){
+        this.dateSaved= null;
+        this.dateMemory= null;
+        this.dateResult= null;
+        this.operator= null;
     },
-    multiplicacion: function(){
-        this.dateResult = this.dateScreen * this.dateSaved;
+    addNumber:function(value){
+        this.dateMemory = this.dateMemory + value.toString() ;
+        console.log(this.dateMemory);
     },
-    divicion: function(){
-        this.dateResult = this.dateScreen / this.dateSaved;
+    delNumber:function(){
+        this.dateMemory = this.dateMemory.substring(0, this.dateMemory.length -1);
+        console.log(this.dateMemory);
+    },
+    eventManager:function(date){
+        if(date === "/" || date === "*" || date === "+" || date === "-"){
+            console.log("entre")
+            this.operator = date;
+        }else if (date === "reset"){
+            this.reset();
+        }else if(date === "del"){
+            this.delNumber();
+        }else if (date === "result"){
+            this.mathOperation();
+        }else if (date ==="comma"){
+            
+        }else{
+            this.addNumber(date)
+        }
+
     }
 }
+const display = document.getElementById("display")
 bottons.forEach(btn => {
     btn.addEventListener("click",function prueba(){
-        hola(btn.value)
+        calculator.eventManager(btn.value)
+        display.innerHTML = calculator.dateMemory;
     })
 })
-function hola (btn){
-    if (btn === "del"){
-        window.alert("hola")
-    }else if (btn === "reset"){
-        window.alert("reset")
-    }else if (btn === ""){
 
-    }else if (btn === "div"){
-
-    }else{
-        
-    }
-
-}
 
