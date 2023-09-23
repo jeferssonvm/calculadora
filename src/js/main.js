@@ -42,11 +42,20 @@ const calculator ={
         }else if (date === "result"){
             this.mathOperation();
         }else if (date ==="comma"){
-            
+            console.log(this.dateMemory.includes(","))
+            const hasComma =this.dateMemory.includes(",")
+            if (this.dateMemory.length != 0){
+                if(!hasComma){
+                    this.dateMemory = this.dateMemory + ",";
+                }
+            }
+
         }else{
+        
             // this.operator != ""
             // ? this.dateMemory = ""
             // : this.dateMemory =this.dateMemory;
+            console.log(date)
             this.addNumber(date)
         }
 
