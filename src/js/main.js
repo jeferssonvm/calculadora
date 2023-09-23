@@ -52,11 +52,9 @@ const calculator ={
 
         }else{
         
-            // this.operator != ""
-            // ? this.dateMemory = ""
-            // : this.dateMemory =this.dateMemory;
             console.log(date)
             this.addNumber(date)
+            
         }
 
     }
