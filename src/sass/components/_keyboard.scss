@@ -17,6 +17,12 @@
         font-weight: 700;
         
 }
+.keyboard__buttons:hover{
+    filter: brightness(92%);
+    cursor: pointer;
+}
+
+
     .del, .reset, .more, .less, .multiplication, .reset, .comma, .division{
         font-size: 20px;
     }
@@ -85,12 +91,23 @@
         box-shadow: 0 5px var(--color-shadow1);
         color: var(--color-text-btn);
     }
+    .cero:active, .one:active ,.two:active , .three:active, .four:active, .five:active, .six:active, .seven:active, .eight:active, .nine:active, .more:active, .comma:active , .multiplication:active , .less:active, .division:active{
+        box-shadow: 0 2.5px var(--color-shadow1);
+        color: var(--color-text-btn);
+    }
     .del,.reset {
         box-shadow: 0 5px var(--color-shadow2);
         color: var(--color-text-btn-reset-del);
     }
+    .del:active,.reset:active {
+        box-shadow: 0 2.5px var(--color-shadow2);
+    }
     .result{
         box-shadow: 0 5px var(--color-shadow3);
+        color: var(--color-text-btn-result);
+    }
+    .result:active{
+        box-shadow: 0 2.5px var(--color-shadow3);
         color: var(--color-text-btn-result);
     }
   

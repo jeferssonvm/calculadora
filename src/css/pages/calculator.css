@@ -53,6 +53,7 @@ html {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  overflow-x: hidden;
 }
 
 .keyboard__content {
@@ -78,6 +79,11 @@ html {
   border-radius: 11px;
   font-size: 32px;
   font-weight: 700;
+}
+.keyboard__content .keyboard__buttons:hover {
+  -webkit-filter: brightness(92%);
+          filter: brightness(92%);
+  cursor: pointer;
 }
 .keyboard__content .del, .keyboard__content .reset, .keyboard__content .more, .keyboard__content .less, .keyboard__content .multiplication, .keyboard__content .reset, .keyboard__content .comma, .keyboard__content .division {
   font-size: 20px;
@@ -184,14 +190,28 @@ html {
           box-shadow: 0 5px var(--color-shadow1);
   color: var(--color-text-btn);
 }
+.keyboard__content .cero:active, .keyboard__content .one:active, .keyboard__content .two:active, .keyboard__content .three:active, .keyboard__content .four:active, .keyboard__content .five:active, .keyboard__content .six:active, .keyboard__content .seven:active, .keyboard__content .eight:active, .keyboard__content .nine:active, .keyboard__content .more:active, .keyboard__content .comma:active, .keyboard__content .multiplication:active, .keyboard__content .less:active, .keyboard__content .division:active {
+  -webkit-box-shadow: 0 2.5px var(--color-shadow1);
+          box-shadow: 0 2.5px var(--color-shadow1);
+  color: var(--color-text-btn);
+}
 .keyboard__content .del, .keyboard__content .reset {
   -webkit-box-shadow: 0 5px var(--color-shadow2);
           box-shadow: 0 5px var(--color-shadow2);
   color: var(--color-text-btn-reset-del);
 }
+.keyboard__content .del:active, .keyboard__content .reset:active {
+  -webkit-box-shadow: 0 2.5px var(--color-shadow2);
+          box-shadow: 0 2.5px var(--color-shadow2);
+}
 .keyboard__content .result {
   -webkit-box-shadow: 0 5px var(--color-shadow3);
           box-shadow: 0 5px var(--color-shadow3);
+  color: var(--color-text-btn-result);
+}
+.keyboard__content .result:active {
+  -webkit-box-shadow: 0 2.5px var(--color-shadow3);
+          box-shadow: 0 2.5px var(--color-shadow3);
   color: var(--color-text-btn-result);
 }
 
