@@ -28,6 +28,7 @@ html {
   display: -ms-grid;
   display: grid;
   place-content: center;
+  padding-block: 30px;
 }
 
 .content-display {
