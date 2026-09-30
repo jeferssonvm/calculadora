@@ -16,3 +16,9 @@
 .prettierignore
 .vscode/
 design/
+# Dependencias de Node (se reinstalan con npm install)
+node_modules/
+
+# Autoguardados de Krita y logs
+*.kra
+*.log
